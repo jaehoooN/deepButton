@@ -2,16 +2,15 @@ import links from "./data/links.json";
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center py-10">
-      <h1 className="text-2xl font-bold mb-6">딥링크 접속 버튼</h1>
-      <div className="grid grid-cols-1 gap-4 w-full max-w-md">
+    <div className="min-h-screen bg-white flex flex-col items-center justify-center px-4">
+      <div className="flex flex-col gap-4 w-full max-w-sm">
         {links.slice(0, 10).map((entry, idx) => (
           <a
             key={idx}
             href={entry.url}
-            className="bg-blue-500 text-white py-2 px-4 rounded text-center hover:bg-blue-600 transition"
+            className="bg-black text-white py-4 px-6 text-center text-lg font-medium rounded hover:opacity-80 transition"
           >
-            {entry.name} 접속
+            {entry.name}
           </a>
         ))}
       </div>
